@@ -30,10 +30,11 @@ const images = [
 const gallery = document.querySelector(".gallery");
 gallery.style.listStyleType = "none";
 const divContainer = document.createElement("div");
+gallery.append(divContainer);
 divContainer.style.display = "flex";
 divContainer.style.gap = "40px";
 divContainer.style.flexWrap = "wrap";
-gallery.append(divContainer);
+
 images.forEach((element) => {
   const img = document.createElement("li");
   img.innerHTML = `<img src="${element.url}" alt="${element.alt}" width="200px" />`;
