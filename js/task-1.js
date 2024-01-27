@@ -4,11 +4,10 @@ const category = document.querySelectorAll("li.item").length;
 
 console.log(`Number of categories: ${category}`);
 
-// const headers = document.getElementsByTagName("h2");
-// Array.from(headers).forEach((header) => {
-//   console.log(`Category: ${header.textContent}`);
-// });
-
-const lis = document.querySelectorAll("li.item");
-const count = lis.length;
-console.log(`Number of items: ${count}`);
+const headers = document.querySelectorAll("h2");
+headers.forEach((header) => {
+  console.log(`Category: ${header.textContent}`);
+  const ul = header.nextElementSibling;
+  const liItems = ul.querySelectorAll("li");
+  console.log(`Number of items: ${liItems.length}`);
+});
