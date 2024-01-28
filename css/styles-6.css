@@ -1,0 +1,58 @@
+#controls {
+  display: flex;
+  gap: 16px;
+  border-radius: 8px;
+  background: #f6f6fe;
+  background-color: #f6f6fe;
+  padding: 32px;
+}
+
+input {
+  border-radius: 8px;
+  border: 1px solid #808080;
+  width: 150px;
+  height: 40px;
+  padding-left: 72px;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+}
+input:hover {
+  border: 1px solid #000;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  border: none;
+}
+
+button[data-create] {
+  background: #4e75ff;
+}
+button[data-create]:hover {
+  background: #6c8cff;
+}
+button[data-destroy] {
+  background: #ff4e4e;
+}
+button[data-destroy]:hover {
+  background: #ff7070;
+}
+#boxes {
+  border-radius: 8px;
+  background: #f6f6fe;
+}

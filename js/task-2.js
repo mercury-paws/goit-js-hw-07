@@ -29,16 +29,17 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 gallery.style.listStyleType = "none";
-const divContainer = document.createElement("div");
-gallery.append(divContainer);
-divContainer.style.display = "flex";
-divContainer.style.gap = "24px";
-divContainer.style.flexWrap = "wrap";
+gallery.style.display = "flex";
+gallery.style.flexDirection = "row";
+gallery.style.gap = "24px";
+gallery.style.flexWrap = "wrap";
+gallery.style.width = "calc((100%-24px)/3)";
+gallery.style.rowGap = "48px";
 
 images.forEach((element) => {
   const img = document.createElement("li");
-  img.innerHTML = `<img src="${element.url}" alt="${element.alt}" width="200px" />`;
-  divContainer.append(img);
+  img.innerHTML = `<img src="${element.url}" alt="${element.alt}" width="360px" />`;
+  gallery.append(img);
 });
 
 //   img.insertAdjacentHTML(
