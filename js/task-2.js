@@ -32,7 +32,7 @@ gallery.style.listStyleType = "none";
 const divContainer = document.createElement("div");
 gallery.append(divContainer);
 divContainer.style.display = "flex";
-divContainer.style.gap = "40px";
+divContainer.style.gap = "24px";
 divContainer.style.flexWrap = "wrap";
 
 images.forEach((element) => {

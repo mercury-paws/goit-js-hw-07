@@ -13,7 +13,7 @@ boxesContainer.append(ulItems);
 
 ulItems.style.listStyleType = "none";
 ulItems.style.display = "flex";
-ulItems.style.gap = "40px";
+ulItems.style.gap = "16px";
 ulItems.style.flexWrap = "wrap";
 
 function createBoxes(event) {
