@@ -1,7 +1,7 @@
 "use strict";
 
-const category = document.querySelectorAll("li.item").length;
-console.log(`Number of categories: ${category}`);
+const categoryCount = document.querySelectorAll("li.item").length;
+console.log(`Number of categories: ${categoryCount}`);
 
 const headers = document.querySelectorAll("h2");
 headers.forEach((header) => {

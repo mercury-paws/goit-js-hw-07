@@ -9,21 +9,19 @@ const createButton = document.querySelector("button[data-create]");
 const destroyButton = document.querySelector("button[data-destroy]");
 
 const boxesContainer = document.getElementById("boxes");
-const ulItems = document.createElement("ul");
-boxesContainer.append(ulItems);
 
-ulItems.style.listStyleType = "none";
-ulItems.style.display = "flex";
-ulItems.style.gap = "16px";
-ulItems.style.flexWrap = "wrap";
+boxesContainer.style.listStyleType = "none";
+boxesContainer.style.display = "flex";
+boxesContainer.style.gap = "16px";
+boxesContainer.style.flexWrap = "wrap";
 
 function createBoxes(event) {
   event.preventDefault();
-  ulItems.innerHTML = "";
+  boxesContainer.innerHTML = "";
 
   let size = 30;
-  const amountInput = document.querySelector("#controls input");
-  const amount = amountInput.value;
+  const amountInput = document.querySelector("input[type='number']");
+  const amount = parseInt(amountInput.value, 10);
 
   if (amount < 1 || amount > 100) {
     return;
@@ -31,11 +29,11 @@ function createBoxes(event) {
 
   for (let i = 0; i < amount; i++) {
     const color = getRandomHexColor();
-    ulItems.insertAdjacentHTML(
+    boxesContainer.insertAdjacentHTML(
       "beforeend",
-      `<li class = "square"
+      `<div class = "square"
       style = "width: ${size}px; height: ${size}px; background-color: ${color};">
-    </li>`
+    </div>`
     );
     size += 10;
   }
@@ -43,8 +41,7 @@ function createBoxes(event) {
 }
 
 function destroyBoxes() {
-  ulItems.remove();
-  location.reload();
+  boxesContainer.innerHTML = "";
 }
 
 createButton.addEventListener("click", createBoxes);

@@ -7,12 +7,4 @@ function inputHandler(event) {
   nameOutput.textContent = name !== "" ? name : "Anonymous";
 }
 
-
-//   if (name !== "" || name !== " ") {
-//     nameOutput.textContent = name;
-//   } else {
-//     ("Anonymous");
-//   }
-
-
 nameInput.addEventListener("input", inputHandler);

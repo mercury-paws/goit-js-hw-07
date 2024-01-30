@@ -41,7 +41,3 @@ images.forEach((element) => {
   img.innerHTML = `<img src="${element.url}" alt="${element.alt}" width="360px" />`;
   gallery.append(img);
 });
-
-//   img.insertAdjacentHTML(
-//     "beforeend",
-//     `<img src="${element.url}" alt="${element.alt}" />`
