@@ -36,8 +36,15 @@ gallery.style.flexWrap = "wrap";
 gallery.style.width = "calc((100%-24px)/3)";
 gallery.style.rowGap = "48px";
 
-images.forEach((element) => {
-  const img = document.createElement("li");
-  img.innerHTML = `<img src="${element.url}" alt="${element.alt}" width="360px" />`;
-  gallery.append(img);
-});
+gallery.innerHTML = createMarkup(images);
+
+function createMarkup(images) {
+  return images
+    .map(
+      (el) =>
+        `
+  <img src="${el.url}" alt="${el.alt}" width="360px" />
+  `
+    )
+    .join("");
+}
