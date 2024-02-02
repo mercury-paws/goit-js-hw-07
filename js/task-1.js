@@ -3,8 +3,8 @@
 const categoryCount = document.querySelectorAll("li.item").length;
 console.log(`Number of categories: ${categoryCount}`);
 
-const headers = document.querySelectorAll("h2");
-headers.forEach((header) => {
+const categoryHeaders = document.querySelectorAll("h2");
+categoryHeaders.forEach((header) => {
   console.log(`Category: ${header.textContent}`);
   const ul = header.nextElementSibling;
   const liItems = ul.querySelectorAll("li");

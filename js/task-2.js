@@ -28,13 +28,6 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-gallery.style.listStyleType = "none";
-gallery.style.display = "flex";
-gallery.style.flexDirection = "row";
-gallery.style.gap = "24px";
-gallery.style.flexWrap = "wrap";
-gallery.style.width = "calc((100%-24px)/3)";
-gallery.style.rowGap = "48px";
 
 gallery.innerHTML = createMarkup(images);
 
@@ -43,7 +36,7 @@ function createMarkup(images) {
     .map(
       (el) =>
         `
-  <img src="${el.url}" alt="${el.alt}" width="360px" />
+  <li><img src="${el.url}" alt="${el.alt}" width="360px" /></li>
   `
     )
     .join("");

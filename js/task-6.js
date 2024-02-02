@@ -15,7 +15,7 @@ boxesContainer.style.display = "flex";
 boxesContainer.style.gap = "16px";
 boxesContainer.style.flexWrap = "wrap";
 
-function createBoxes(event) {
+function createBoxes() {
   event.preventDefault();
   boxesContainer.innerHTML = "";
 
